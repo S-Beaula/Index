@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Content Editable Example</title>
+    <style>
+        #editable {
+            border: 1px solid #ccc;
+            padding: 10px;
+            width: 300px;
+            min-height: 100px;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Content Editable Example</h1>
+<div id="editable" contenteditable="false">
+    This is editable text. You can change it!
+</div>
+
+<script>
+    // Optional: Add functionality to save the content
+    const editableDiv = document.getElementById('editable');
+
+    editableDiv.addEventListener('input', () => {
+        console.log('Content changed:', editableDiv.innerHTML);
+    });
+</script>
+
+</body>
+</html>
